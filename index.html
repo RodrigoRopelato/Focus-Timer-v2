@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="music-on">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer 2.0 - Pomodoro</title>
+
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="src/main.js" defer></script>
+</head>
+
+<body>
+    <div id="app">
+        <button id="toggle-mode">
+            <span class="sr-only">Ativar Light Mode</span>
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+        </button>
+
+        <div>
+
+            <section id="timer" class="flex">
+                <span id="minutes">00</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </section>
+
+            <section id="controls" class="flex">
+
+                <button data-action="toggleRunning" class="ph ph-play-circle">
+                    <span class="sr-only">Iniciar contador</span>
+                </button>
+
+                <button data-action="toggleRunning" class="ph ph-pause-circle">
+                    <span class="sr-only">Pausar contador</span>
+                </button>
+
+                <button data-action="reset" class="ph ph-stop-circle">
+                    <span class="sr-only">Reiniciar contador</span>
+                </button>
+
+                <button data-action="setPlus" class="ph ph-plus-circle">
+                    <span class="sr-only">Adicionar contador</span>
+                </button>
+
+                <button data-action="setMinus" class="ph ph-minus-circle">
+                    <span class="sr-only">Diminuir contador</span>
+                </button>
+            </section>
+        </div>
+        <div>
+
+            <section id="sounds">
+
+                <button data-action="tree" class="sound ph ph-tree button1">
+                    <span class="sr-only">Sons Floresta</span>
+                </button>
+
+                <button data-action="rain" class="sound ph ph-cloud-rain button2">
+                    <span class="sr-only">Sons Chuva</span>
+                </button>
+
+                <button data-action="storefront" class="sound ph ph-storefront button3">
+                    <span class="sr-only">Sons Cafeteria</span>
+                </button>
+
+                <button data-action="fire" class="sound ph ph-fire button4">
+                    <span class="sr-only">Sons de Floresta</span>
+                </button>
+
+            </section>
+        </div>
+
+    </div>
+</body>
+
+</html>
